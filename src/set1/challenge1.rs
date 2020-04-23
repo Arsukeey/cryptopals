@@ -1,4 +1,4 @@
-fn string_to_hex(input: String) -> Vec<u8> {
+pub fn string_to_hex(input: String) -> Vec<u8> {
     let mut v: Vec<u8> = vec![];
     let mut i = input.chars();
     loop {
@@ -33,14 +33,14 @@ const BASE64: [char; 64] = [
     '5', '6', '7', '8', '9', '+', '/',
 ];
 
-fn get_last_bits(input: u32, n: u8) -> usize {
+pub fn get_last_bits(input: u32, n: u8) -> usize {
     if n < 32 {
         return (input & ((1 << n) - 1)) as usize;
     }
     0
 }
 
-fn hex_to_base64(input: &[u8]) -> String {
+pub fn hex_to_base64(input: &[u8]) -> String {
     let mut ret = String::new();
 
     let mut i = 0;
