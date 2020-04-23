@@ -10,7 +10,7 @@ pub fn string_to_hex(input: String) -> Vec<u8> {
                 let n2 = char_to_hex(c2) | (n1 << 4);
                 v.push(n2);
             }
-            (Some(c1), _) => panic!("Expected a pair of numbers in string_to_hex."),
+            (Some(_), _) => panic!("Expected a pair of numbers in string_to_hex."),
             _ => break,
         }
     }

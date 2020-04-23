@@ -21,7 +21,7 @@ fn xor_combination(s1: String, s2: String) -> Vec<u8> {
 
                 ret.push((rr1 as u8) << 4 | rr2 as u8);
             }
-            (Some(x1), None) => panic!("Half pair in xor_combination."),
+            (Some(_), None) => panic!("Half pair in xor_combination."),
             _ => break,
         }
         i += 1;
